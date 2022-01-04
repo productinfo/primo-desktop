@@ -4,7 +4,7 @@
   import * as actions from '$lib/actions'
   import TextField from '$lib/ui/TextField.svelte'
   import PrimaryButton from '$lib/ui/PrimaryButton.svelte'
-  import _find from 'lodash/find'
+  import _find from 'lodash-es/find'
 
   export let buttons = []
 
