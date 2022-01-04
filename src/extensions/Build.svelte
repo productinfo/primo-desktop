@@ -3,7 +3,7 @@
   import { flattenDeep, uniqBy, find } from 'lodash-es'
   import JSZip from 'jszip'
   import { saveAs } from 'file-saver'
-  import { html as beautifyHTML } from 'js-beautify'
+  import beautify from 'js-beautify'
   import { format } from 'timeago.js'
   import Hosting from '$lib/components/Hosting.svelte'
   import PrimaryButton from '$lib/ui/PrimaryButton.svelte'
@@ -195,7 +195,7 @@
         site,
         separateModules: true,
       })
-      const formattedHTML = await beautifyHTML(html)
+      const formattedHTML = await beautify.html(html)
 
       return await Promise.all([
         {
